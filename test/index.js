@@ -3,11 +3,11 @@ import test from 'node:test';
 import { remark } from 'remark';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
-import remarkAlerts from 'remark-alerts';
+import remarkBlockquoteHighlight from 'remark-blockquote-highlights';
 
 async function processMarkdown(markdown) {
   const file = await remark()
-    .use(remarkAlerts)
+    .use(remarkBlockquoteHighlight)
     .use(remarkRehype)
     .use(rehypeStringify)
     .process(markdown);
@@ -21,39 +21,39 @@ async function processMarkdown(markdown) {
   return result;
 }
 
-test('remark-alerts', async (t) => {
-  await t.test('should transform "[!NOTE]" blockquote to alert-note', async () => {
+test('remark-highlights', async (t) => {
+  await t.test('should transform "[!NOTE]" blockquote to highlights-note', async () => {
     const result = await processMarkdown('> [!NOTE] This is a note.');
 
-    assert.ok(result.includes('<blockquote class="alert-note">'));
+    assert.ok(result.includes('<blockquote class="highlights-note">'));
     assert.ok(result.includes('This is a note.'));
   });
 
-  await t.test('should transform "[!TIP]" blockquote to alert-tip', async () => {
+  await t.test('should transform "[!TIP]" blockquote to highlights-tip', async () => {
     const result = await processMarkdown('> [!TIP] This is a tip.');
 
-    assert.ok(result.includes('<blockquote class="alert-tip">'));
+    assert.ok(result.includes('<blockquote class="highlights-tip">'));
     assert.ok(result.includes('This is a tip.'));
   });
 
-  await t.test('should transform "[!IMPORTANT]" blockquote to alert-important', async () => {
+  await t.test('should transform "[!IMPORTANT]" blockquote to highlights-important', async () => {
     const result = await processMarkdown('> [!IMPORTANT] Crucial information.');
 
-    assert.ok(result.includes('<blockquote class="alert-important">'));
+    assert.ok(result.includes('<blockquote class="highlights-important">'));
     assert.ok(result.includes('Crucial information.'));
   });
 
-  await t.test('should transform "[!WARNING]" blockquote to alert-warning', async () => {
+  await t.test('should transform "[!WARNING]" blockquote to highlights-warning', async () => {
     const result = await processMarkdown('> [!WARNING] Critical attention required.');
 
-    assert.ok(result.includes('<blockquote class="alert-warning">'));
+    assert.ok(result.includes('<blockquote class="highlights-warning">'));
     assert.ok(result.includes('Critical attention required.'));
   });
 
-  await t.test('should transform "[!CAUTION]" blockquote to alert-caution', async () => {
+  await t.test('should transform "[!CAUTION]" blockquote to highlights-caution', async () => {
     const result = await processMarkdown('> [!CAUTION] Exercise caution.');
 
-    assert.ok(result.includes('<blockquote class="alert-caution">'));
+    assert.ok(result.includes('<blockquote class="highlights-caution">'));
     assert.ok(result.includes('Exercise caution.'));
   });
 
@@ -62,10 +62,10 @@ test('remark-alerts', async (t) => {
 
     assert.ok(result.includes('<blockquote>'));
     assert.ok(result.includes('This is a regular blockquote.'));
-    assert.ok(!result.includes('class="alert-note"'));
-    assert.ok(!result.includes('class="alert-tip"'));
-    assert.ok(!result.includes('class="alert-important"'));
-    assert.ok(!result.includes('class="alert-warning"'));
-    assert.ok(!result.includes('class="alert-caution"'));
+    assert.ok(!result.includes('class="highlights-note"'));
+    assert.ok(!result.includes('class="highlights-tip"'));
+    assert.ok(!result.includes('class="highlights-important"'));
+    assert.ok(!result.includes('class="highlights-warning"'));
+    assert.ok(!result.includes('class="highlights-caution"'));
   });
 });

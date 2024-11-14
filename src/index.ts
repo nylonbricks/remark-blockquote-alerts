@@ -8,15 +8,15 @@ interface ExtendedBlockquoteData {
   type?: string;
 }
 
-const alertTypes: Record<string, string> = {
-  '[!NOTE]': 'alert-note',
-  '[!TIP]': 'alert-tip',
-  '[!IMPORTANT]': 'alert-important',
-  '[!WARNING]': 'alert-warning',
-  '[!CAUTION]': 'alert-caution',
+const highlightsTypes: Record<string, string> = {
+  '[!NOTE]': 'highlights-note',
+  '[!TIP]': 'highlights-tip',
+  '[!IMPORTANT]': 'highlights-important',
+  '[!WARNING]': 'highlights-warning',
+  '[!CAUTION]': 'highlights-caution',
 };
 
-const remarkAlerts: Plugin = () => {
+const RemarkBlockquoteHighlights: Plugin = () => {
   return (tree: Node) => {
     visit(tree, 'blockquote', (node: Blockquote) => {
       const firstChild = node.children[0] as Paragraph;
@@ -25,11 +25,11 @@ const remarkAlerts: Plugin = () => {
         const textNode = firstChild.children[0] as PhrasingContent & { value?: string };
         const text = textNode?.value?.trim() || '';
 
-        for (const [prefix, className] of Object.entries(alertTypes)) {
+        for (const [prefix, className] of Object.entries(highlightsTypes)) {
           if (text.startsWith(prefix)) {
             const data = (node.data || {}) as ExtendedBlockquoteData;
             data.hProperties = { className };
-            data.type = 'alert';
+            data.type = 'highlights';
             textNode.value = text.replace(prefix, '').trim();
             node.data = data;
             break;
@@ -40,4 +40,4 @@ const remarkAlerts: Plugin = () => {
   };
 };
 
-export default remarkAlerts;
+export default RemarkBlockquoteHighlights;

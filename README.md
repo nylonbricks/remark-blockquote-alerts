@@ -1,1 +1,1 @@
-# remark-alerts
+# remark-blockquote-highlights

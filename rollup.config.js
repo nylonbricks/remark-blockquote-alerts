@@ -3,10 +3,10 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 
 export default {
-  input: 'src/remark-alerts.ts',
+  input: 'src/index.ts',
   output: [
     {
-      file: 'lib/index.cjs.js',
+      file: 'lib/index.cjs',
       format: 'cjs',
       exports: 'auto',
     },
@@ -26,5 +26,4 @@ export default {
       tsconfig: './tsconfig.json',
     }),
   ],
-  external: ['unist-util-visit', 'unified', 'mdast'],
 };

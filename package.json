@@ -1,24 +1,31 @@
 {
-  "name": "remark-alerts",
+  "name": "remark-blockquote-highlights",
   "version": "1.0.0",
-  "description": "Remark plugin to transform blockquotes into styled alerts like notes and tips in Markdown.",
+  "description": "A remark plugin to add custom classes to blockquotes with titles like 'Note' and 'Warning,' highlighting important information in markdown content.",
   "license": "MIT",
-  "repository": "nylon-bricks/remark-alerts",
+  "repository": "nylon-bricks/remark-blockquote-highlights",
   "keywords": [
+    "gatsbyjs",
     "remark",
+    "markdown",
     "plugin",
-    "alert"
+    "blockquote",
+    "highlight",
+    "remark-plugin",
+    "markdown-styling",
+    "custom-classes",
+    "content-highlighting"
   ],
-  "bugs": "https://github.com/nylon-bricks/remark-alerts/issues",
+  "bugs": "https://github.com/nylon-bricks/remark-blockquote-highlights/issues",
   "author": "Hak Lee <me@haklee.me> (https://www.haklee.me)",
   "sideEffects": false,
   "type": "module",
-  "main": "lib/index.cjs.js",
+  "main": "lib/index.cjs",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "exports": {
     "import": "./lib/index.esm.js",
-    "require": "./lib/index.cjs.js",
+    "require": "./lib/index.cjs",
     "default": "./lib/index.mjs"
   },
   "scripts": {
@@ -27,7 +34,6 @@
   },
   "dependencies": {
     "mdast": "^0.26.2",
-    "remark-parse": "^11.0.0",
     "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0"
   },
@@ -38,6 +44,7 @@
     "@types/unist": "^3.0.3",
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
+    "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.1",
     "rollup": "^4.26.0",
     "rollup-plugin-typescript2": "^0.36.0",
@@ -45,6 +52,5 @@
   },
   "files": [
     "lib"
-  ],
-  "private": true
+  ]
 }
