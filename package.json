@@ -1,0 +1,50 @@
+{
+  "name": "remark-alerts",
+  "version": "1.0.0",
+  "description": "Remark plugin to transform blockquotes into styled alerts like notes and tips in Markdown.",
+  "license": "MIT",
+  "repository": "nylon-bricks/remark-alerts",
+  "keywords": [
+    "remark",
+    "plugin",
+    "alert"
+  ],
+  "bugs": "https://github.com/nylon-bricks/remark-alerts/issues",
+  "author": "Hak Lee <me@haklee.me> (https://www.haklee.me)",
+  "sideEffects": false,
+  "type": "module",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    "import": "./lib/index.esm.js",
+    "require": "./lib/index.cjs.js",
+    "default": "./lib/index.mjs"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "node ./test"
+  },
+  "dependencies": {
+    "mdast": "^0.26.2",
+    "remark-parse": "^11.0.0",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@types/mdast": "^4.0.4",
+    "@types/unist": "^3.0.3",
+    "rehype-stringify": "^10.0.1",
+    "remark": "^15.0.1",
+    "remark-rehype": "^11.1.1",
+    "rollup": "^4.26.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.6.3"
+  },
+  "files": [
+    "lib"
+  ],
+  "private": true
+}

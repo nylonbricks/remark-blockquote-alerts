@@ -1,0 +1,22 @@
+# .editorconfig
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{js,ts,tsx,jsx,json}]
+quote_type = single
+max_line_length = 100
+
+[*.{css,scss,sass,less}]
+indent_style = space
+indent_size = 2
+max_line_length = 100
+trim_trailing_whitespace = true
+insert_final_newline = true
