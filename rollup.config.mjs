@@ -11,10 +11,6 @@ export default {
       exports: 'auto',
     },
     {
-      file: 'lib/index.esm.js',
-      format: 'esm',
-    },
-    {
       file: 'lib/index.mjs',
       format: 'es',
     },

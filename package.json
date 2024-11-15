@@ -1,6 +1,6 @@
 {
   "name": "remark-blockquote-highlights",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "A remark plugin to add custom classes to blockquotes with titles like 'Note' and 'Warning,' highlighting important information in markdown content.",
   "license": "MIT",
   "repository": "nylon-bricks/remark-blockquote-highlights",
@@ -19,18 +19,24 @@
   "bugs": "https://github.com/nylon-bricks/remark-blockquote-highlights/issues",
   "author": "Hak Lee <me@haklee.me> (https://www.haklee.me)",
   "sideEffects": false,
-  "type": "module",
   "main": "lib/index.cjs",
-  "module": "lib/index.esm.js",
+  "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
   "exports": {
-    "import": "./lib/index.esm.js",
-    "require": "./lib/index.cjs",
-    "default": "./lib/index.mjs"
+    ".": {
+      "import": "./lib/index.mjs",
+      "require": "./lib/index.cjs",
+      "default": "./lib/index.mjs"
+    },
+    "./styles/*.css": {
+      "import": "./styles/*.css",
+      "require": "./styles/*.css"
+    }
   },
   "scripts": {
+    "clean": "rm -rf lib",
     "build": "rollup -c",
-    "test": "node ./test"
+    "test": "node ./test/index.mjs"
   },
   "dependencies": {
     "mdast": "^0.26.2",
