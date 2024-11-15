@@ -51,6 +51,7 @@
     "typescript": "^5.6.3"
   },
   "files": [
-    "lib"
+    "lib",
+    "styles"
   ]
 }
