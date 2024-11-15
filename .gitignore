@@ -7,7 +7,6 @@ build/
 
 # TypeScript
 *.tsbuildinfo
-*.d.ts
 
 # IDE settings (WebStorm/IntelliJ IDEA)
 .idea/
