@@ -1,6 +1,6 @@
 {
   "name": "remark-blockquote-highlights",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A remark plugin to add custom classes to blockquotes with titles like 'Note' and 'Warning,' highlighting important information in markdown content.",
   "license": "MIT",
   "repository": "nylon-bricks/remark-blockquote-highlights",
@@ -51,6 +51,7 @@
     "typescript": "^5.6.3"
   },
   "files": [
-    "lib"
+    "lib",
+    "styles"
   ]
 }
