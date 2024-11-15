@@ -73,6 +73,7 @@ const result = remark()
 This output will be:
 
 ```html
+
 <blockquote class="blockquote-note">
   <p>Highlights information that users should take into account, even when skimming.</p>
 </blockquote>
@@ -83,7 +84,7 @@ This output will be:
 To use `remark-blockquote-highlights` in a `Gatsby.js` project, you can integrate it with `gatsby-plugin-mdx` by
 extending its Remark plugins configuration.
 
-```javascript
+```typescript
 // gatsby-config.js
 
 import remarkHighlight from 'remark-blockquote-highlights';
@@ -101,3 +102,29 @@ const config: GatsbyConfig = {
   ],
 };
 ```
+
+## Styling
+
+To apply the default styles shown in the examples, simply import:
+
+```typescript
+import "remark-blockquote-highlights/styles/blockquote.min.css";
+```
+
+If you'd like to customize the styles, you can copy and modify the file:
+
+```text
+remark-blockquote-highlights/styles/blockquote.css
+```
+
+## Contributing
+
+We welcome all contributions! You can [open an issue](issues) to report bugs or suggest features, and [submit a pull request](pulls) to contribute directly to the codebase.
+
+## License
+
+This project is distributed under the MIT License. For more information, see the [LICENSE](./LICENSE) file.
+
+## Contact
+
+If you have any questions, feel free to reach out via [Issues](issues) or contact me directly at [me@haklee.me](mailto:me@haklee.me).
