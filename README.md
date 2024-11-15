@@ -119,7 +119,7 @@ remark-blockquote-highlights/styles/blockquote.css
 
 ## Contributing
 
-We welcome all contributions! You can [open an issue](issues) to report bugs or suggest features, and [submit a pull request](pulls) to contribute directly to the codebase.
+We welcome all contributions! You can [open an issue](../issues) to report bugs or suggest features, and [submit a pull request](../pulls) to contribute directly to the codebase.
 
 ## License
 
@@ -127,4 +127,4 @@ This project is distributed under the MIT License. For more information, see the
 
 ## Contact
 
-If you have any questions, feel free to reach out via [Issues](issues) or contact me directly at [me@haklee.me](mailto:me@haklee.me).
+If you have any questions, feel free to reach out via [Issues](../issues) or contact me directly at [me@haklee.me](mailto:me@haklee.me).
