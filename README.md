@@ -3,8 +3,12 @@
 ![NPM Version](https://img.shields.io/npm/v/remark-blockquote-highlights)
 
 `remark-blockquote-highlights` extends the functionality of Markdown to enable highlighted blockquotes in environments
-using `remark`, such as `gatsby.js` and similar frameworks. By default, Markdown in these environments does not support
+using `remark`, such as [Gatsby.js](https://gatsbyjs.com/) and similar frameworks. By default, Markdown in these
+environments does not support
 blockquote highlights.
+
+This package supports [ESM](https://nodejs.org/api/esm.html) and [CommonJS](https://nodejs.org/api/modules.html)
+formats, ensuring compatibility with modern frameworks and Node.js environments.
 
 GitHub introduced this feature in 2022 (see [GitHub Discussions](https://github.com/orgs/community/discussions/16925)),
 and it has since been widely used in many documents. This library allows you to bring similar functionality to your
@@ -39,12 +43,61 @@ like the example below:
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./docs/blockquote-sample-dark.png">
-  <img alt="Blockquote-Sample" src="./docs/blockquote-sample-light.png" style="width: 420px;">
+  <img alt="Blockquote-Sample" src="./docs/blockquote-sample-light.png" width="560">
 </picture>
-
 
 ## Installation
 
 ```bash
 npm install remark-blockquote-highlights
+```
+
+You can also install using [pnpm](https://pnpm.io/) or [yarn](https://yarnpkg.com/).
+
+## Usage
+
+### Basic Usage
+
+```typescript
+import remarkHighlight from 'remark-blockquote-highlights';
+
+const markdown = '> [!NOTE] Highlights information that users should take into account, even when skimming.';
+
+const result = remark()
+  .use(remarkHighlight)
+  .use(remarkRehype)
+  .use(rehypeStringify)
+  .processSync(markdown).toString();
+```
+
+This output will be:
+
+```html
+<blockquote class="blockquote-note">
+  <p>Highlights information that users should take into account, even when skimming.</p>
+</blockquote>
+```
+
+### Using with Gatsby.js
+
+To use `remark-blockquote-highlights` in a `Gatsby.js` project, you can integrate it with `gatsby-plugin-mdx` by
+extending its Remark plugins configuration.
+
+```javascript
+// gatsby-config.js
+
+import remarkHighlight from 'remark-blockquote-highlights';
+
+const config: GatsbyConfig = {
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        mdxOptions: {
+          remarkPlugins: [remarkHighlight],
+        },
+      },
+    },
+  ],
+};
 ```
