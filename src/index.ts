@@ -1,7 +1,7 @@
-import { Plugin } from 'unified';
-import { visit } from 'unist-util-visit';
-import { Node } from 'unist';
-import { Blockquote, Paragraph, PhrasingContent } from 'mdast';
+import {Plugin} from 'unified';
+import {visit} from 'unist-util-visit';
+import {Node} from 'unist';
+import {Blockquote, Paragraph, PhrasingContent} from 'mdast';
 
 interface ExtendedBlockquoteData {
   hProperties?: { className: string };
@@ -9,11 +9,11 @@ interface ExtendedBlockquoteData {
 }
 
 const highlightsTypes: Record<string, string> = {
-  '[!NOTE]': 'highlights-note',
-  '[!TIP]': 'highlights-tip',
-  '[!IMPORTANT]': 'highlights-important',
-  '[!WARNING]': 'highlights-warning',
-  '[!CAUTION]': 'highlights-caution',
+  '[!NOTE]': 'blockquote-note',
+  '[!TIP]': 'blockquote-tip',
+  '[!IMPORTANT]': 'blockquote-important',
+  '[!WARNING]': 'blockquote-warning',
+  '[!CAUTION]': 'blockquote-caution',
 };
 
 const RemarkBlockquoteHighlights: Plugin = () => {
@@ -28,8 +28,8 @@ const RemarkBlockquoteHighlights: Plugin = () => {
         for (const [prefix, className] of Object.entries(highlightsTypes)) {
           if (text.startsWith(prefix)) {
             const data = (node.data || {}) as ExtendedBlockquoteData;
-            data.hProperties = { className };
-            data.type = 'highlights';
+            data.hProperties = {className};
+            data.type = 'blockquote';
             textNode.value = text.replace(prefix, '').trim();
             node.data = data;
             break;
