@@ -36,11 +36,8 @@ like the example below:
 ```
 
 **Here is how they are displayed:**
-<picture>
-  <source srcset="docs/blockquote-sample-dark.png" media="(prefers-color-scheme: dark)">
-  <source srcset="docs/blockquote-sample-light.png" media="(prefers-color-scheme: light)">
-  <img src="docs/blockquote-sample-light.png" alt="Example">
-</picture>
+![Sample Display(Dark)](./docs/blockquote-sample-dark.png#gh-dark-mode-only)
+![Sample Display(Light)](./docs/blockquote-sample-light.png#gh-light-mode-only)
 
 ## Installation
 
