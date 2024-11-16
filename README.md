@@ -1,11 +1,10 @@
-# remark-blockquote-highlights
+# remark-blockquote-alerts
 
-![NPM Version](https://img.shields.io/npm/v/remark-blockquote-highlights)
+![NPM Version](https://img.shields.io/npm/v/remark-blockquote-alerts)
 
-`remark-blockquote-highlights` extends the functionality of Markdown to enable highlighted blockquotes in environments
+`remark-blockquote-alerts` extends the functionality of Markdown to enable highlighted blockquotes in environments
 using `remark`, such as [Gatsby.js](https://gatsbyjs.com/) and similar frameworks. By default, Markdown in these
-environments does not support
-blockquote highlights.
+environments does not support blockquote highlights.
 
 This package supports [ESM](https://nodejs.org/api/esm.html) and [CommonJS](https://nodejs.org/api/modules.html)
 formats, ensuring compatibility with modern frameworks and Node.js environments.
@@ -49,7 +48,7 @@ like the example below:
 ## Installation
 
 ```bash
-npm install remark-blockquote-highlights
+npm install remark-blockquote-alerts
 ```
 
 You can also install using [pnpm](https://pnpm.io/) or [yarn](https://yarnpkg.com/).
@@ -59,12 +58,12 @@ You can also install using [pnpm](https://pnpm.io/) or [yarn](https://yarnpkg.co
 ### Basic Usage
 
 ```typescript
-import remarkHighlight from 'remark-blockquote-highlights';
+import remarkAlerts from 'remark-blockquote-alerts';
 
 const markdown = '> [!NOTE] Highlights information that users should take into account, even when skimming.';
 
 const result = remark()
-  .use(remarkHighlight)
+  .use(remarkAlerts)
   .use(remarkRehype)
   .use(rehypeStringify)
   .processSync(markdown).toString();
@@ -81,13 +80,13 @@ This output will be:
 
 ### Using with Gatsby.js
 
-To use `remark-blockquote-highlights` in a `Gatsby.js` project, you can integrate it with `gatsby-plugin-mdx` by
+To use `remark-blockquote-alerts` in a `Gatsby.js` project, you can integrate it with `gatsby-plugin-mdx` by
 extending its Remark plugins configuration.
 
 ```typescript
 // gatsby-config.js
 
-import remarkHighlight from 'remark-blockquote-highlights';
+import remarkAlerts from 'remark-blockquote-alerts';
 
 const config: GatsbyConfig = {
   plugins: [
@@ -95,7 +94,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         mdxOptions: {
-          remarkPlugins: [remarkHighlight],
+          remarkPlugins: [remarkAlerts],
         },
       },
     },
@@ -108,18 +107,18 @@ const config: GatsbyConfig = {
 To apply the default styles shown in the examples, simply import:
 
 ```typescript
-import "remark-blockquote-highlights/styles/blockquote.min.css";
+import "remark-blockquote-alerts/styles/blockquote.min.css";
 ```
 
 If you'd like to customize the styles, you can copy and modify the file:
 
 ```text
-remark-blockquote-highlights/styles/blockquote.css
+remark-blockquote-alerts/styles/blockquote.css
 ```
 
 ## Contributing
 
-We welcome all contributions! You can [open an issue](https://github.com/nylon-bricks/remark-blockquote-highlights/issues) to report bugs or suggest features, and [submit a pull request](https://github.com/nylon-bricks/remark-blockquote-highlights/pulls) to contribute directly to the codebase.
+We welcome all contributions! You can [open an issue](https://github.com/nylon-bricks/remark-blockquote-alerts/issues) to report bugs or suggest features, and [submit a pull request](https://github.com/nylon-bricks/remark-blockquote-alerts/pulls) to contribute directly to the codebase.
 
 ## License
 
@@ -127,4 +126,4 @@ This project is distributed under the MIT License. For more information, see the
 
 ## Contact
 
-If you have any questions, feel free to reach out via [Issues](https://github.com/nylon-bricks/remark-blockquote-highlights/issues) or contact me directly at [me@haklee.me](mailto:me@haklee.me).
+If you have any questions, feel free to reach out via [Issues](https://github.com/nylon-bricks/remark-blockquote-alerts/issues) or contact me directly at [me@haklee.me](mailto:me@haklee.me).

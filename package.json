@@ -1,5 +1,5 @@
 {
-  "name": "remark-blockquote-highlights",
+  "name": "remark-blockquote-alerts",
   "version": "0.0.1",
   "description": "A remark plugin to add custom classes to blockquotes with titles like 'Note' and 'Warning,' highlighting important information in markdown content.",
   "license": "MIT",
