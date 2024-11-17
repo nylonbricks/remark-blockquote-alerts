@@ -1,6 +1,6 @@
 {
   "name": "remark-blockquote-alerts",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A remark plugin to add custom classes to blockquotes with titles like 'Note' and 'Warning,' highlighting important information in markdown content.",
   "license": "MIT",
   "repository": "nylon-bricks/remark-blockquote-highlights",
@@ -18,7 +18,6 @@
   ],
   "bugs": "https://github.com/nylon-bricks/remark-blockquote-highlights/issues",
   "author": "Hak Lee <me@haklee.me> (https://www.haklee.me)",
-  "sideEffects": false,
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
