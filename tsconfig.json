@@ -3,13 +3,12 @@
     "target": "esnext",
     "module": "esnext",
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "./lib",
     "moduleResolution": "node",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
   },
-  "include": [
-    "src", "**/*.test.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src", "**/*.test.ts"],
+  "exclude": ["node_modules", "lib"]
 }
