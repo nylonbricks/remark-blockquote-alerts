@@ -8,7 +8,7 @@ interface ExtendedBlockquoteData {
   type?: string;
 }
 
-const highlightsTypes: Record<string, string> = {
+const alertsTypes: Record<string, string> = {
   '[!NOTE]': 'blockquote-note',
   '[!TIP]': 'blockquote-tip',
   '[!IMPORTANT]': 'blockquote-important',
@@ -16,7 +16,7 @@ const highlightsTypes: Record<string, string> = {
   '[!CAUTION]': 'blockquote-caution',
 };
 
-const RemarkBlockquoteHighlights: Plugin = () => {
+const RemarkBlockquoteAlerts: Plugin = () => {
   return (tree: Node) => {
     visit(tree, 'blockquote', (node: Blockquote) => {
       const firstChild = node.children[0] as Paragraph;
@@ -25,7 +25,7 @@ const RemarkBlockquoteHighlights: Plugin = () => {
         const textNode = firstChild.children[0] as PhrasingContent & { value?: string };
         const text = textNode?.value?.trim() || '';
 
-        for (const [prefix, className] of Object.entries(highlightsTypes)) {
+        for (const [prefix, className] of Object.entries(alertsTypes)) {
           if (text.startsWith(prefix)) {
             const data = (node.data || {}) as ExtendedBlockquoteData;
             data.hProperties = {className};
@@ -40,4 +40,4 @@ const RemarkBlockquoteHighlights: Plugin = () => {
   };
 };
 
-export default RemarkBlockquoteHighlights;
+export default RemarkBlockquoteAlerts;

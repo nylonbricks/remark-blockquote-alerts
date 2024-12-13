@@ -3,11 +3,11 @@ import test from 'node:test';
 import {remark} from 'remark';
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
-import remarkBlockquoteHighlight from 'remark-blockquote-highlights';
+import remarkAlerts from 'remark-blockquote-alerts';
 
 async function processMarkdown(markdown) {
   const file = await remark()
-    .use(remarkBlockquoteHighlight)
+    .use(remarkAlerts)
     .use(remarkRehype)
     .use(rehypeStringify)
     .process(markdown);
@@ -21,7 +21,7 @@ async function processMarkdown(markdown) {
   return result;
 }
 
-test('remark-highlights', async (t) => {
+test('remark-alerts', async (t) => {
   await t.test('should transform "[!NOTE]" blockquote to blockquote-note', async () => {
     const result = await processMarkdown('> [!NOTE] This is a note.');
 
