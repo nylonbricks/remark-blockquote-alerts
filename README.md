@@ -1,9 +1,8 @@
 # remark-blockquote-alerts
 
-<a href="https://www.npmjs.com/package/remark-blockquote-alerts" target="_blank">
+<p><a href="https://www.npmjs.com/package/remark-blockquote-alerts" target="_blank">
   <img src="https://img.shields.io/npm/v/remark-blockquote-alerts" alt="NPM Version" />
-</a>
-
+</a></p>
 
 `remark-blockquote-alerts` extends the functionality of Markdown to enable highlighted blockquotes in environments
 using `remark`, such as [Gatsby.js](https://gatsbyjs.com/) and similar frameworks. By default, Markdown in these
