@@ -1,6 +1,8 @@
 # remark-blockquote-alerts
 
-![NPM Version](https://img.shields.io/npm/v/remark-blockquote-alerts)
+<a href="https://www.npmjs.com/package/remark-blockquote-alerts" target="_blank">
+  <img src="https://img.shields.io/npm/v/remark-blockquote-alerts" alt="NPM Version" />
+</a>
 
 `remark-blockquote-alerts` extends the functionality of Markdown to enable highlighted blockquotes in environments
 using `remark`, such as [Gatsby.js](https://gatsbyjs.com/) and similar frameworks. By default, Markdown in these
@@ -118,7 +120,10 @@ remark-blockquote-alerts/styles/blockquote.css
 
 ## Contributing
 
-We welcome all contributions! You can [open an issue](https://github.com/nylon-bricks/remark-blockquote-alerts/issues) to report bugs or suggest features, and [submit a pull request](https://github.com/nylon-bricks/remark-blockquote-alerts/pulls) to contribute directly to the codebase.
+We welcome all contributions! You can [open an issue](https://github.com/nylon-bricks/remark-blockquote-alerts/issues)
+to report bugs or suggest features,
+and [submit a pull request](https://github.com/nylon-bricks/remark-blockquote-alerts/pulls) to contribute directly to
+the codebase.
 
 ## License
 
@@ -126,4 +131,6 @@ This project is distributed under the MIT License. For more information, see the
 
 ## Contact
 
-If you have any questions, feel free to reach out via [Issues](https://github.com/nylon-bricks/remark-blockquote-alerts/issues) or contact me directly at [me@haklee.me](mailto:me@haklee.me).
+If you have any questions, feel free to reach out
+via [Issues](https://github.com/nylon-bricks/remark-blockquote-alerts/issues) or contact me directly
+at [me@haklee.me](mailto:me@haklee.me).
