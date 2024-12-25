@@ -4,6 +4,7 @@
   <img src="https://img.shields.io/npm/v/remark-blockquote-alerts" alt="NPM Version" />
 </a>
 
+
 `remark-blockquote-alerts` extends the functionality of Markdown to enable highlighted blockquotes in environments
 using `remark`, such as [Gatsby.js](https://gatsbyjs.com/) and similar frameworks. By default, Markdown in these
 environments does not support blockquote highlights.
