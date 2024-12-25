@@ -1,6 +1,6 @@
 {
   "name": "remark-blockquote-alerts",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "A remark plugin to add custom classes to blockquotes with titles like 'Note' and 'Warning,' highlighting important information in markdown content.",
   "license": "MIT",
   "repository": "nylon-bricks/remark-blockquote-highlights",
@@ -39,7 +39,6 @@
     "test": "node ./test/index.mjs"
   },
   "dependencies": {
-    "unified": "^11.0.5",
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
