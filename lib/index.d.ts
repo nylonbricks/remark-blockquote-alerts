@@ -1,3 +1,3 @@
-import { Plugin } from 'unified';
-declare const RemarkBlockquoteAlerts: Plugin;
-export default RemarkBlockquoteAlerts;
+import { Node } from 'unist';
+declare const remarkBlockquoteAlerts: () => (tree: Node) => void;
+export default remarkBlockquoteAlerts;
