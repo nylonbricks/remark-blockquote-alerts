@@ -1,9 +1,12 @@
 {
   "name": "remark-blockquote-alerts",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A remark plugin to add custom classes to blockquotes with titles like 'Note' and 'Warning,' highlighting important information in markdown content.",
   "license": "MIT",
-  "repository": "nylon-bricks/remark-blockquote-highlights",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nylonbricks/remark-blockquote-alerts.git"
+  },
   "keywords": [
     "gatsbyjs",
     "remark",
@@ -16,8 +19,8 @@
     "custom-classes",
     "content-highlighting"
   ],
-  "bugs": "https://github.com/nylon-bricks/remark-blockquote-highlights/issues",
-  "author": "Hak Lee <me@haklee.me> (https://www.haklee.me)",
+  "bugs": "https://github.com/nylon-bricks/remark-blockquote-alerts/issues",
+  "author": "Hak Lee <hi@haklee.me> (https://www.haklee.me)",
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "types": "lib/index.d.ts",
@@ -42,17 +45,17 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.1",
-    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^15.3.1",
     "@types/mdast": "^4.0.4",
     "@types/unist": "^3.0.3",
     "rehype-stringify": "^10.0.1",
     "remark": "^15.0.1",
     "remark-parse": "^11.0.0",
-    "remark-rehype": "^11.1.1",
-    "rollup": "^4.27.4",
+    "remark-rehype": "^11.1.2",
+    "rollup": "^4.44.0",
     "rollup-plugin-typescript2": "^0.36.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.8.3"
   },
   "files": [
     "lib",
